@@ -17,7 +17,7 @@ export class FetchApiDataService  {
   constructor(private http: HttpClient) { } // This will inject HttpClient to all class, making it available via this.http
 
   // Making the api call to post to the user registration endpoint
-  public addUser(userDetails: any): Observable<any> {//observable, for asynchronous operation
+  public registerUser(userDetails: any): Observable<any> {//observable, for asynchronous operation
       console.log(userDetails);
       //post to the api endpoint of users. Using this.http will post to api and return api response
       return this.http.post(apiUrl + 'users', userDetails).pipe(
