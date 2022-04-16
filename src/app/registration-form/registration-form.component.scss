@@ -1,0 +1,10 @@
+button{
+   background-color: black;
+   width: 100px;
+   color: gold;
+      &:hover{
+   background-color: rgb(240, 157, 74);
+   color: black;
+   transition: background-color .5s;
+   }
+}
