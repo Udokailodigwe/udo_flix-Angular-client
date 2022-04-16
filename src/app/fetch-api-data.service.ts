@@ -45,17 +45,17 @@ export class FetchApiDataService  {
       );
     }
 
-    //Making the api call to get a single movie endpoint
-    public getSingleMovie(): Observable<any> {
-      const token = localStorage.getItem('token');
-      return this.http.get(apiUrl + 'movies/:title', {headers: new HttpHeaders({
-        Authorization: 'Bearer ' + token,
-      })
-    }).pipe(
-        map(this.extractResponseData),
-        catchError(this.handleError)
-      );
-    }
+    // //Making the api call to get a single movie endpoint
+    // public getSingleMovie(): Observable<any> {
+    //   const token = localStorage.getItem('token');
+    //   return this.http.get(apiUrl + 'movies/:title', {headers: new HttpHeaders({
+    //     Authorization: 'Bearer ' + token,
+    //   })
+    // }).pipe(
+    //     map(this.extractResponseData),
+    //     catchError(this.handleError)
+    //   );
+    // }
 
     //Making the api call to get directors endpoint
     public getDirector(): Observable<any> {
