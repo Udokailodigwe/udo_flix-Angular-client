@@ -1,6 +1,7 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { FetchApiDataService } from '../fetch-api-data.service';
 
 
@@ -17,6 +18,7 @@ export class LoginFormComponent implements OnInit {
     public dialogRef: MatDialogRef<LoginFormComponent>,
     public fetchApiData: FetchApiDataService,
     public snackBar: MatSnackBar, 
+    public router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -39,6 +41,7 @@ export class LoginFormComponent implements OnInit {
           duration: 3000,
           verticalPosition: 'top'
         });
+        this.router.navigate(['movies']);//on login, navigate to movieCard component, via router library
       }, (response) => {
         console.log(response);
         this.snackBar.open('Login  unsuccessful', 'Please check Username and Password', {
