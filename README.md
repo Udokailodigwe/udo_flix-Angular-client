@@ -24,4 +24,4 @@ Run `ng generate component component-name` to generate a new component. You can 
 <li>It fetched all required data from (https://github.com/Udokailodigwe/udo_Flix)</li>
 <li>Node.js and npm package is used</li>
 <li>The application's codebase contains comments using Typedoc</li>
-<li>The application is hosted on GitHub Pages</li>
+<li>The application is hosted on GitHub Pages(https://udokailodigwe.github.io/udo_flix-Angular-client/)</li>
