@@ -1,0 +1,39 @@
+.main-page {
+  height: 100vh;
+  background: url(../../assets/welcomeBackground.jpg) no-repeat center center fixed;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-title {
+  color: #eab42c;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  position: relative;
+  bottom: 90px;
+  left: 325px;
+}
+
+button {
+  display: inline-block;
+  margin-left: 60px;
+  background-color: #f09d4a;
+  width: 100px;
+}
+
+button:hover {
+  background-color: black;
+  color: gold;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+}
+/*# sourceMappingURL=welcome-page.component.css.map */

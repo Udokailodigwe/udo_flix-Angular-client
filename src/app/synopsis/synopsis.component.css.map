@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAA;EACJ,UAAU,EAAE,0BAA0B;CACxC",
+    "sources": [
+        "synopsis.component.scss"
+    ],
+    "names": [],
+    "file": "synopsis.component.css"
+}
