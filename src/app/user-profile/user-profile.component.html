@@ -1,0 +1,61 @@
+<app-navigation></app-navigation>
+<div class="profile">
+   <mat-card mat-card-xl-image class="profile-card">
+      <mat-card-header >
+         <mat-card-title class="text">Hello {{currentUser?.username}} </mat-card-title>
+      </mat-card-header>
+      <mat-card-subtitle class="text">Update your profile </mat-card-subtitle>
+      <form>
+         <mat-form-field>
+            <!-- String interpolation "{{ }}" is used to output data from the class to the template -->
+         <!-- [(ngModel)] directive used to bind the form input values entered by 
+            the user to the userData object in the user-page-component. -->
+            <input 
+               matInput
+               [(ngModel)]="userData.Username"
+               type="text"
+               name="Username"
+               value = {{currentUser?.username}}
+               placeholder="Username"
+               required
+            >
+         </mat-form-field>
+         <mat-form-field>
+            <input 
+               matInput
+               [(ngModel)]="userData.Password"
+               type="text"
+               name="Password"
+               value = ''
+               placeholder="Password"
+               required
+            >
+         </mat-form-field>
+         <mat-form-field>
+            <input 
+            matInput
+            [(ngModel)]="userData.Email"
+            type="text"
+            name="Email"
+            value = {{currentUser?.email}}
+            placeholder="Email"
+            required
+            >
+         </mat-form-field>
+         <mat-form-field>
+            <input 
+            matInput
+            [(ngModel)]="userData.Birthday"
+            type="text"
+            value = {{currentUser?.birthday}}
+            name="Birthday"
+            placeholder="Birthday"
+            >
+         </mat-form-field>
+      </form>
+   <mat-card-actions class="button">
+      <button mat-raised-button (click)="editUser()">Update profile </button>
+      <button mat-raised-button (click)="deleteUser()">Delete profile </button>
+      </mat-card-actions>
+   </mat-card>
+</div>
