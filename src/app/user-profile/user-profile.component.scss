@@ -1,0 +1,37 @@
+.profile{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background: violet;
+   
+}
+.profile-card{
+   width: 700px;
+   height: 700px;
+   background-color: rgba(0, 0, 0, 0.67);
+   
+}
+
+form{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   background: white;
+   height: 400px;
+   padding: 20px;
+   
+}
+.text{
+   font-size: 20px;
+   font-family: monospace;
+   color: white;
+   text-align: center;
+}
+
+.button{
+   display: flex;
+   justify-content: space-between;
+   margin: 10px;
+}

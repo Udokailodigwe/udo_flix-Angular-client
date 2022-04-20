@@ -1,0 +1,11 @@
+.favorite {
+  height: 100%;
+  background: violet;
+  font-family: monospace;
+  text-align: center;
+}
+
+h1 {
+  padding: 20px;
+}
+/*# sourceMappingURL=favorite-movies.component.css.map */

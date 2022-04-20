@@ -1,0 +1,13 @@
+button {
+  background-color: black;
+  width: 100px;
+  color: gold;
+}
+
+button:hover {
+  background-color: #f09d4a;
+  color: black;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+}
+/*# sourceMappingURL=registration-form.component.css.map */

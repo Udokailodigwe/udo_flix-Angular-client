@@ -1,0 +1,14 @@
+.genre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dialog {
+  background: rgba(238, 130, 238, 0.256);
+}
+/*# sourceMappingURL=genre.component.css.map */

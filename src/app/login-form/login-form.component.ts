@@ -34,7 +34,7 @@ export class LoginFormComponent implements OnInit {
         //store login credentials on local storage
         localStorage.setItem('token', response.token);
         localStorage.setItem('userId', response.users._id);
-        localStorage.setItem('user', JSON.stringify(response));
+        localStorage.setItem('user', JSON.stringify(response.users));//stringify credential to be stored in browser
         this.dialogRef.close(); //close dialog on successful login
         console.log(response);
         this.snackBar.open('User logged in successfully!', 'OK',{

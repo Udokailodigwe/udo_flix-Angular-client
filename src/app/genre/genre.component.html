@@ -1,0 +1,16 @@
+<div>
+   <mat-card class="dialog">
+      <mat-card-header>
+         <mat-card-title >Genre: {{ data.name }}</mat-card-title>
+      </mat-card-header>
+         <mat-dialog-content>Description: {{ data.description }}</mat-dialog-content>
+      <mat-card-actions>
+         <button 
+         mat-icon-button 
+         [mat-dialog-close]="true" 
+         class="genre-close-button">
+            <mat-icon>close</mat-icon>
+         </button>
+      </mat-card-actions>
+   </mat-card>
+</div>
