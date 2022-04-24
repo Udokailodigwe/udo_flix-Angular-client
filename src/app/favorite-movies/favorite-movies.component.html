@@ -5,10 +5,13 @@
 <div class="favorite">
    <!-- The ngFor directive (*ngFor) is used to loop through the favouriteMovies array in the component. A mat-card is then rendered for each movie -->
 <mat-card class="mat-card" *ngFor="let favs of favorites; let i = index;">
-   <button mat-icon-button (click)="deleteFavoriteMovie(favs._id, favs.title)">
-            <mat-icon>favorite</mat-icon>
-   </button>
+      <button 
+            mat-icon-button 
+            (click)="deleteFavoriteMovie(favs._id, favs.title)">
+                  <mat-icon>favorite</mat-icon>
+      </button>
 <mat-card-header>
+      <!-- String interpolation "{{ }}" is used to output data from the class to the template -->
 <mat-card-title class="card-title">{{favs.title}}</mat-card-title>
 <mat-card-subtitle class="card-subtitle">Directed by: {{favs.director.name}} </mat-card-subtitle>
 <mat-card-subtitle class="card-subtitle">Released: {{favs.releasedYear}}</mat-card-subtitle>

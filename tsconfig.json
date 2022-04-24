@@ -23,6 +23,10 @@
       "dom"
     ]
   },
+  "typedocOptions": {
+        "entryPoints": ["src/app/app.module.ts"],
+        "out": "docs"
+    },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

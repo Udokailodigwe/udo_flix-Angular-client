@@ -1,12 +1,22 @@
 <div >
    <mat-toolbar class="movie-nav" >
       <img src="../../assets/bannerImage.jpg" alt="udo-flix" routerLink="/movies">
+      <!-- String interpolation "{{ }}" is used to output data from the class to the template -->
+      <!-- Event bound the (click) event toMovies()-->
          <button 
          mat-raised-button
          class="button1"
-         (click)="toMovies()">Movies</button>
-         <button class= "button2" mat-button [matMenuTriggerFor]="profile">
+         (click)="toMovies()"
+         >
+            Movies
+      </button>
+         <button 
+         class= "button2" 
+         mat-button 
+         [matMenuTriggerFor]="profile"
+         >
             {{currentUser?.username}}<span class="material-icons">expand_more</span>
+
          </button>
             <mat-menu #profile="matMenu">
                <button  mat-menu-item (click)="toProfile()">Profile</button>

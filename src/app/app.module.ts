@@ -1,3 +1,12 @@
+/**
+ * The AppModule class is used to import then declare all of the components that will be used in the app, 
+ * as well as to import all of the modules that will be used. The AppComponent is bootstrapped when the
+ * module is bootstrapped, and thereby gets access to the module contents. By virtue of being children of
+ * the AppComponent (which is the root component), all the other components get access to exported 
+ * declarables of the imported modules in the AppModule too, as well as to the other child components.
+ * @module AppModule
+ */
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -21,6 +30,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 /**app components */
 import { AppComponent } from './app.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
@@ -34,6 +44,7 @@ import { GenreComponent } from './genre/genre.component';
 import { DirectorComponent } from './director/director.component';
 import { SynopsisComponent } from './synopsis/synopsis.component';
 
+/**defined navigation paths */
 const appRoutes: Routes = [
   {path: 'welcome', component: WelcomePageComponent},
   {path: 'profile', component: UserProfileComponent},

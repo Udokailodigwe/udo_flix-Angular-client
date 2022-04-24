@@ -9,10 +9,10 @@
          <mat-form-field>
             <!-- String interpolation "{{ }}" is used to output data from the class to the template -->
          <!-- [(ngModel)] directive used to bind the form input values entered by 
-            the user to the userData object in the user-page-component. -->
+            the user to the userData object in the user-profile-component. -->
             <input 
                matInput
-               [(ngModel)]="userData.Username"
+               [(ngModel)]="userData.username"
                type="text"
                name="Username"
                value = {{currentUser?.username}}
@@ -23,7 +23,7 @@
          <mat-form-field>
             <input 
                matInput
-               [(ngModel)]="userData.Password"
+               [(ngModel)]="userData.password"
                type="text"
                name="Password"
                value = ''
@@ -34,7 +34,7 @@
          <mat-form-field>
             <input 
             matInput
-            [(ngModel)]="userData.Email"
+            [(ngModel)]="userData.email"
             type="text"
             name="Email"
             value = {{currentUser?.email}}
@@ -45,7 +45,7 @@
          <mat-form-field>
             <input 
             matInput
-            [(ngModel)]="userData.Birthday"
+            [(ngModel)]="userData.birthday"
             type="text"
             value = {{currentUser?.birthday}}
             name="Birthday"
@@ -54,7 +54,7 @@
          </mat-form-field>
       </form>
    <mat-card-actions class="button">
-      <button mat-raised-button (click)="editUser()">Update profile </button>
+      <button mat-raised-button (click)="editUser()"> Update profile </button>
       <button mat-raised-button (click)="deleteUser()">Delete profile </button>
       </mat-card-actions>
    </mat-card>

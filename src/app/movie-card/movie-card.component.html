@@ -1,11 +1,10 @@
 <app-navigation></app-navigation>
 <div class="movie-card">
+      <!-- [(ngModel)] directive used to bind the form input values entered by 
+            the user to the userData object in the user-profile-component. -->
 <mat-card class="mat-card" *ngFor="let movie of movies; let i = index;">
-      <button class="favorite" mat-icon-button (click)="toggleFavorite(movie)">
-            <mat-icon *ngIf="!isFavorited(movie._id)"> favorite_border </mat-icon>
-            <mat-icon *ngIf="isFavorited(movie._id)"> favorite </mat-icon>
-      </button>
 <mat-card-header>
+      <!-- String interpolation "{{ }}" is used to output data from the class to the template -->
 <mat-card-title class="card-title">{{movie.title}}</mat-card-title>
 <mat-card-subtitle class="card-subtitle">Directed by: {{movie.director.name}}</mat-card-subtitle>
 <mat-card-subtitle class="card-subtitle">Released: {{movie.releasedyear}}</mat-card-subtitle>
@@ -31,7 +30,10 @@
       >
             Synopsis
       </button>
-      
+      <button class="favorite" mat-icon-button (click)="toggleFavorite(movie)">
+            <mat-icon *ngIf="!isFavorited(movie._id)"> favorite_border </mat-icon>
+            <mat-icon *ngIf="isFavorited(movie._id)"> favorite </mat-icon>
+      </button>
 </mat-card-actions>
 </Section>
 </mat-card>
