@@ -39,6 +39,9 @@ button{
    font-style: italic;
    width: 110px;
    text-align: center;
+   &:hover{
+      cursor: pointer;
+   }
 }
 
 
