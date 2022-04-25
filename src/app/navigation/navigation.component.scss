@@ -27,13 +27,63 @@ button{
 //    background: black;
 // }
 
-img{
-   border-radius: 3px;
-   width: 160px;
+.banner{
    position: relative;
    right: 800px;
-   cursor: pointer ;
-
+   outline-style: dotted;
+   font-family: ui-serif;
+   outline-color: #ff8c00;
+   outline-color: currentcolor;
+   background-color: #000000;
+   color: #f3a4f3;
+   font-style: italic;
+   width: 110px;
+   text-align: center;
 }
 
 
+
+@media (max-width: 280px)  {
+   .banner{
+      position: relative;
+      right: 1px;
+      font-size: small;
+      margin: 0px;
+   }
+}
+
+@media(max-width: 280px){
+   .movie-nav{
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+   }
+}
+
+@media (min-width: 275px) and (max-width: 370px) {
+   .banner{
+      position: relative;
+      right: 50px;
+   }
+}
+
+@media  ( min-width: 371px) and (max-width: 500px){
+   .banner{
+      position: relative;
+      right: 80px
+   }
+}
+
+@media  ( min-width: 501px) and (max-width: 850px){
+   .banner{
+      position: relative;
+      right: 210px
+   }
+}
+
+@media  ( min-width: 851px) and (max-width: 1100px) {
+   .banner{
+      position: relative;
+      right: 500px
+   }
+}

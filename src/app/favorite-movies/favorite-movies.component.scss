@@ -1,10 +1,42 @@
 .favorite{
    height: 100%;
    background: violet;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding-bottom: 15px;
+   padding: 1rem ;
 }
 
 h1, p{
    text-align: center;
    font-family: monospace;
    margin: 0px;
+}
+
+.mat-card{
+   margin: 2px;
+   background-color: rgba(0, 0, 0, 0.796);
+}
+
+.card-title, .card-subtitle{
+   color: white;
+   position: relative;
+   bottom: 20px;
+   margin-bottom: 6px;
+}
+
+button{
+   color: white;
+   font-size: 10.5px;
+   margin-right: 4px;
+}
+
+.favorite-button{
+   display: flex;
+   justify-content: flex-end;
+   color: white;
+   &:hover{
+      cursor: pointer;
+   }
 }

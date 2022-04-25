@@ -28,7 +28,7 @@ import { SynopsisComponent } from '../synopsis/synopsis.component';
 export class MovieCardComponent implements OnInit {
 
   movies: any[] = [];     //An empty array to hold the called movies and its embedded data from the api
-  userFavoriteMovie: any = {};      // hold users favorite movies
+  userFavoriteMovie: any = [];      // hold users favorite movies
 
   /**
    * Called when creating an instance of the class
@@ -161,7 +161,7 @@ export class MovieCardComponent implements OnInit {
    * @returns true or false
    */
     isFavorited(movieId: string): boolean{
-        console.log(movieId);
+       // console.log(movieId);
         return this.userFavoriteMovie.includes(movieId);
     }
 

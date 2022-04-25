@@ -181,8 +181,10 @@ export class FetchApiDataService  {
    */
     public addFavoriteMovie(movieId: string): Observable<any> {
       const token = localStorage.getItem('token');
-      const username = localStorage.getItem('user');
-      return this.http.post(apiUrl + `users/${username}/movies/${movieId}`, null, {
+      let  username :any = localStorage.getItem('user');
+      username =  JSON.parse(username)
+      console.log('user',username.username)
+      return this.http.post(apiUrl + `users/${username?.username}/movies/${movieId}`, null, {
         headers: new HttpHeaders({
             Authorization: 'Bearer ' + token,
       })
@@ -202,8 +204,9 @@ export class FetchApiDataService  {
    */
     public editUserProfile(userDetails: object): Observable<any> {
       const token = localStorage.getItem('token');
-      const username = localStorage.getItem('user');
-      return this.http.put(apiUrl + `users/${username}`, userDetails, {
+      let username: any = localStorage.getItem('user');
+      username = JSON.parse(username);
+      return this.http.put(apiUrl + `users/${username?.username}`, userDetails, {
           headers: new HttpHeaders({
             Authorization: 'Bearer ' + token,
       })
@@ -223,8 +226,10 @@ export class FetchApiDataService  {
    */
     public deleteFavoriteMovies(movieId: any): Observable<any> {
       const token = localStorage.getItem('token');
-      const username = localStorage.getItem('user');
-      return this.http.delete(apiUrl + `users/${username}/movies/${movieId}`, {
+      let username: any = localStorage.getItem('user');
+      username =  JSON.parse(username)
+      console.log('user',username.username)
+      return this.http.delete(apiUrl + `users/${username?.username}/movies/${movieId}`, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),
@@ -243,8 +248,9 @@ export class FetchApiDataService  {
    */
     public deleteUserProfile(): Observable<any> {
       const token = localStorage.getItem('token');
-      const user = localStorage.getItem('user');
-      return this.http.delete(apiUrl + `users/${user}`, {headers: new HttpHeaders({
+      let username: any = localStorage.getItem('user');
+      username = JSON.parse(username);      
+      return this.http.delete(apiUrl + `users/${username?.username}`, {headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),
       }).pipe(
