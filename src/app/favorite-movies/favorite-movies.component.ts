@@ -85,7 +85,7 @@ export class FavoriteMoviesComponent implements OnInit {
    * @returns the function getUserMovies() 
    */
   deleteFavoriteMovie(movieId: string, title: string): void{
-      this.fetchApiData.deleteFavoriteMovies(movieId).subscribe((response: any) => {
+      this.fetchApiData.deleteFavoriteMovies(movieId).subscribe(() => {
         this.snackBar.open(`${title} has been deleted from your favorites!`, 'OK',{
           duration: 3000
         });
