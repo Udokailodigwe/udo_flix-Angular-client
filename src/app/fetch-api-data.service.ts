@@ -228,7 +228,7 @@ export class FetchApiDataService  {
       const token = localStorage.getItem('token');
       let username: any = localStorage.getItem('user');
       username =  JSON.parse(username)
-      console.log('user',username.username)
+      console.log('user', username?.username)
       return this.http.delete(apiUrl + `users/${username?.username}/movies/${movieId}`, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
