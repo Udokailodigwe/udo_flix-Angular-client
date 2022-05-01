@@ -5,10 +5,12 @@
    padding-bottom: 15px;
    padding: 1rem ;
    background: violet;
+   height: -webkit-fill-available;
 }
 .mat-card{
    margin: 2px;
    background-color: rgba(0, 0, 0, 0.796);
+   height: fit-content;
 }
 .card-title, .card-subtitle{
    color: white;
