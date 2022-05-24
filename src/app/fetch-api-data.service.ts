@@ -19,6 +19,7 @@ import { map } from 'rxjs/operators';
 
 //declaring the api url that will provide data for the client app
 const apiUrl = 'https://udo-flix.herokuapp.com/';
+//const apiUrl = 'http://localhost:8080/';
 
 //this decorator will make this service available to all components
 @Injectable({
